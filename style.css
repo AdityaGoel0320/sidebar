@@ -1,0 +1,227 @@
+        html {
+            font-size: 62.5%;
+            /* to not make webpage not right scrollabel */
+            overflow-x: hidden;
+
+        }
+
+        body {
+            /* to not make webpage not right scrollabel */
+
+            overflow-x: hidden;
+
+        }
+
+
+
+        * {
+            margin: 0rem;
+            padding: 0rem;
+        }
+
+
+
+        /* ================================
+        navbar style code
+        ================================ */
+
+        .ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        li {
+            list-style: none;
+            font-size: 2rem;
+            text-transform: uppercase;
+
+
+            font-weight: 500;
+        }
+
+
+        li:hover {
+            color: aqua;
+            transition-property: all;
+            transition-duration: 2.5s;
+        }
+
+
+        .logo {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            text-transform: uppercase;
+        }
+
+        .logo:hover {
+            color: aqua;
+            transition-property: all;
+            transition-duration: 2.5s;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            align-items: center;
+            color: white;
+            padding: 3rem;
+        }
+
+
+
+        .menu {
+
+            display: none;
+
+        }
+
+
+
+        #line {
+            display: none;
+        }
+
+
+
+        #cross {
+            display: none;
+
+
+        }
+
+
+
+        #line_in {
+            display: none;
+        }
+
+
+
+        #cross_in {
+            display: none;
+
+
+        }
+
+        /* ================================
+        section code
+        ================================ */
+
+
+
+
+        .sec1,
+        .sec2 {
+            height: 50rem;
+            width: 100%;
+            background-color: rgb(127, 127, 189);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+
+
+        .sec2 {
+            background-color: aquamarine;
+        }
+
+
+
+        /* ================================
+        responsive making code
+        ================================ */
+
+
+
+
+
+        /* as we made 1rem =10px so we have tu decrease %so that it becomre t responsive */
+
+
+
+        @media(max-width:980px) {
+
+
+            .menu {
+
+                display: inline-block;
+
+            }
+
+
+
+            #line {
+                display: inline-block;
+                z-index: 9999999;
+            }
+
+
+            #line_in {
+                display: block;
+            }
+    
+    
+    
+            #cross_in {
+                display: block;
+    
+    
+            }
+
+            header {
+                position: relative;
+            }
+
+            .ul {
+                /* display: none; */
+                z-index: 1;
+                height: 110vh;
+                width: 100%;
+                position: absolute;
+                top: 0rem;
+                background-color: pink;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                ;
+                justify-content: center;
+                left: 0rem;
+
+
+                /* now we have to move it completely to right */
+                transform: translateX(100%);
+                transition: all 0.3s linear;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+
+
+            .active .ul{
+                transform: translateX(0);
+                visibility: visible;
+                pointer-events: auto;
+
+                opacity: 1;
+
+            }
+
+
+
+
+
+
+
+
+        }
